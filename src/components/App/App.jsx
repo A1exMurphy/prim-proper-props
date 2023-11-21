@@ -4,6 +4,7 @@ import './App.css';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
 import CompileGuestList from '../GuestList/GuestList.jsx'
+import DinnerSupplies from '../DinnerSupplies/DinnerSupplies.jsx';
 
 function App() {
   let [guestList, setGuestList] = useState([]);
@@ -104,15 +105,7 @@ function App() {
       <h2>Guest List</h2>
           <CompileGuestList guestList={guestList}/>
       <h2>Dinner Supplies</h2>
-      <div>
-        Spoons: {guestList.length * 2}
-      </div>
-      <div>
-        Forks: {guestList.length * 2}
-      </div>
-      <div>
-        Knives: {guestList.length * 2}
-      </div>
+          <DinnerSupplies guestList={guestList}/>
       <footer>
         <Footer />
       </footer>
