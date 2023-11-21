@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer.jsx';
 import CompileGuestList from '../GuestList/GuestList.jsx'
 import DinnerSupplies from '../DinnerSupplies/DinnerSupplies.jsx';
 import GuestForm from '../GuestForm/GuestForm.jsx';
+import PartyLeader from '../PartyLeader/PartyLeader.jsx';
 
 function App() {
   let [guestList, setGuestList] = useState([]);
@@ -30,8 +31,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h2>Party Leader</h2>
-      {guestList[0] && <h3>{guestList[0].name}</h3>}
+        <PartyLeader leader={guestList[0]}/>
       <h2>Add a new guest</h2>
         <GuestForm getGuests={getGuests} />
       <h2>Guest List</h2>
