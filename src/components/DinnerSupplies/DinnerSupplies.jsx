@@ -1,16 +1,14 @@
+import SilverWare from "../SilverWare/SilverWare";
 
 function DinnerSupplies({guestList}) {
+    // console.log(guestList)
+    let count = guestList.length * 2
+    // console.log(count)
     return(
         <>
-        <div>
-            Spoons: {guestList.length * 2}
-        </div>
-        <div>
-            Forks: {guestList.length * 2}
-        </div>
-        <div>
-            Knives: {guestList.length * 2}
-        </div>
+            <SilverWare guestList={guestList} name="Spoons" count={count} />
+            <SilverWare guestList={guestList} name="Forks" count={count} />
+            <SilverWare guestList={guestList} name="Knives" count={count} />
         </>
 
 )}
