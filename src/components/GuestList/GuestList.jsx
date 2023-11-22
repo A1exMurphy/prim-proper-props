@@ -1,4 +1,12 @@
+// import axios from "axios";
 
+// function deleteGuest(e) {
+//   `
+//     DELETE FROM guests 
+//       WHERE "id" = $1;
+//   `
+//       console.log('delete')
+// }
 function CompileGuestList({guestList}) {
     return(
     <>
@@ -14,6 +22,7 @@ function CompileGuestList({guestList}) {
     <tr key={guest.id}>
         <td>{guest.name}</td>
         <td>{String(guest.kidsMeal)}</td>
+        {/* <td><button onClick="deleteGuest(e)">dead to me</button></td> */}
     </tr>
     ))}
 
